@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+  <title>Frontend Mentor | Body Mass Index Calculator</title>
+</head>
+<body>
+  <header class="header container_section">
+    <div class="background"></div>
+    <section class="header_content container">
+      <div class="header_top"><img src="./assets/images/logo.svg" alt="" class="logo"></div>
+      <section class="header_botom">
+        <div class="text_content">
+          <h1>Body Mass <br> Index Calculator</h1>
+          <p>Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.</p>
+        </div>
+        <article class="calculator">
+          <form id="calculator">
+            <h2>Enter your details below</h2>
+            <div class="options">
+              <article class="radio_wrapper">
+                <input type="radio" id="Metric" name="detail" checked>
+                <label for="Metric">Metric</label>
+              </article>
+              <article class="radio_wrapper">
+                <input type="radio" id="Imperial" name="detail">
+                <label for="Imperial">Imperial</label>
+              </article>
+            </div>
+            <div class="inputs">
+              <article class="input_wrapper">
+                <label for="height">Height</label>
+                <input type="number" id="height" placeholder="0">
+                <span class="unit">cm</span>
+              </article>
+              <article class="input_wrapper">
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" placeholder="0">
+                <span class="unit">kg</span>
+              </article>
+            </div>
+            <!-- <div class="inputs imperial_inputs">
+              <article class="input_wrapper">
+                <label for="height">Height</label>
+                <input type="number" id="height" placeholder="0">
+                <span class="unit">ft</span>
+              </article>
+              <article class="input_wrapper">
+                <input type="number" id="" placeholder="0">
+                <span class="unit unit_2">in</span>
+              </article>
+            </div>
+            <div class="inputs imperial_inputs">
+              <article class="input_wrapper">
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" placeholder="0">
+                <span class="unit">st</span>
+              </article>
+              <article class="input_wrapper">
+                <input type="number" id="weight_1" placeholder="0">
+                <span class="unit unit_2">lbs</span>
+              </article>
+            </div> -->
+            <article class="calculator_explanation">
+              <h3>Welcome!</h3>
+              <p>Enter your height and weight and you’ll see your BMI result here</p>
+            </article>
+          </form>
+        </article>
+      </section>
+    </section>
+  </header>
+  <main class="main">
+    <section class="result container hl">
+      <img src="./assets/images/pattern-curved-line-left.svg" alt="curved line" class="curved_line">
+      <div class="image_block">
+        <img src="./assets/images/man-eating.png" alt="man eating" class="man">
+      </div>
+      <article class="main_content">
+        <h3>What your BMI result means</h3>
+        <p>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.</p>
+      </article>
+    </section>
+    <div class="items_wrapper container_section">
+      <section class="items container">
+        <article class="item">
+          <img src="./assets/images/icon-eating.svg" alt="" class="icon">
+          <div class="wrapper">
+            <h4 class="title">Healthy eating</h4>
+            <p class="text">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+          </div>
+        </article>
+        <article class="item">
+          <img src="./assets/images/icon-exercise.svg" alt="" class="icon">
+          <div class="wrapper">
+            <h4 class="title">Regular exercise</h4>
+            <p class="text">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+          </div>
+        </article>
+        <article class="item">
+          <img src="./assets/images/icon-sleep.svg" alt="" class="icon">
+          <div class="wrapper">
+            <h4 class="title">Adequate sleep</h4>
+            <p class="text">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+    <section class="limitations container hl">
+      <article class="limitations_content">
+        <h3>Limitations of BMI</h3>
+        <p>Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.</p>
+      </article>
+      <section class="blocks">
+        <article class="block">
+          <div class="head">
+            <img src="./assets/images/icon-gender.svg" alt="gender icon">
+            <h4>Gender</h4>
+          </div>
+          <p>The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</p>
+        </article>
+        <article class="block">
+          <div class="head">
+            <img src="./assets/images/icon-age.svg" alt="age icon">
+            <h4>Age</h4>
+          </div>
+          <p>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
+        </article>
+        <article class="block">
+          <div class="head">
+            <img src="./assets/images/icon-muscle.svg" alt="muscle icon">
+            <h4>Muscle</h4>
+          </div>
+          <p>BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
+        </article>
+        <article class="block">
+          <div class="head">
+            <img src="./assets/images/icon-pregnancy.svg" alt="pregnancy icon">
+            <h4>Pregnancy</h4>
+          </div>
+          <p>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
+        </article>
+        <article class="block">
+          <div class="head">
+            <img src="./assets/images/icon-race.svg" alt="race icon">
+            <h4>Race</h4>
+          </div>
+          <p>Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</p>
+        </article>
+        <img src="./assets/images/pattern-curved-line-right.svg" alt="curved_line" class="block_curved_line">
+      </section>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

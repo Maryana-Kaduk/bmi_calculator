@@ -1,0 +1,452 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #345FF6;
+    --gunmetal: #253347;
+    --dark_electric_blue: #5E6E85;
+    --pure_white: #FFFFFF;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.container_section {
+    max-width: 1392px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    max-width: 978px;
+    width: 100%;
+    min-height: 737px;
+    border-radius: 0 0 35px 35px;
+    background: linear-gradient(to right bottom, rgba(214, 230, 254, 0), rgb(214, 230, 254));
+}
+
+.header_content {
+    position: relative;
+    z-index: 100;
+}
+
+.header_top {
+    max-height: 138px;
+    padding: 74px 0 0;
+}
+
+.header .header_botom {
+    position: relative;
+    max-width: 862px;
+    width: 100%;
+    padding: 131px 0 195px;
+}
+
+.header_botom .calculator {
+    max-width: 564px;
+    width: 100%;
+    min-height: 448px;
+    background-color: var(--pure_white);
+    box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+    border-radius: 16px;
+    position: absolute;
+    right: 0;
+    top: 43px;
+    transform: translateX(50%);
+}
+
+.header_botom .text_content {
+    max-width: 564px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.text_content h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 110%;
+    letter-spacing: -3.2px;
+    color: var(--gunmetal);
+}
+
+.text_content p {
+    max-width: 465px;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--dark_electric_blue);
+}
+
+section.result {
+    padding: 210px 0 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.result .image_block {
+    position: relative;
+    max-width: 564px;
+    height: 388px;
+    width: 100%;
+    border-radius: 32px;
+    background-color: #E7F5FE;
+}
+
+.image_block .man {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.curved_line {
+    position: absolute;
+    right: 27px;
+    top: 13px;
+}
+
+section.result article.main_content {
+    max-width: 465px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+section.hl h3 {
+    color: var(--gunmetal);
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -2.4px;
+}
+
+section.hl p {
+    color: var(--dark_electric_blue);
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.items_wrapper {
+    border-radius: 35px;
+    background: linear-gradient(to right bottom, rgba(214, 252, 254, 0), rgba(214, 230, 254, 0.6));
+}
+
+section.items {
+    padding: 72px 0 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.items article.item {
+    max-width: 365px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 45px;
+}
+
+article.item .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+article.item .wrapper h4 {
+    color: var(--gunmetal);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+}
+
+article.item .wrapper p {
+    color: var(--dark_electric_blue);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+section.limitations {
+    padding: 120px 0;
+    min-height: 937px;
+}
+
+section.limitations .limitations_content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 564px;
+    width: 100%;
+}
+
+article.block:nth-child(1) {
+    position: relative;
+    right: 99px;
+    grid-area: gender;
+}
+article.block:nth-child(2) {
+    position: relative;
+    z-index: 10;
+    grid-area: age;
+}
+article.block:nth-child(3) {
+    position: relative;
+    z-index: 10;
+    grid-area: muscle;
+}
+article.block:nth-child(4) {
+    position: relative;
+    right: 199px;
+    z-index: 100;
+    grid-area: pregnancy;
+}
+article.block:nth-child(5) {
+    position: relative;
+    right: 199px;
+    z-index: 100;
+    grid-area: race;
+}
+
+section.limitations .blocks {
+    display: grid;
+    grid-template-rows: 1fr 184px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        '. gender'
+        'age muscle'
+        'pregnancy race'
+    ;
+    row-gap: 24px;
+    column-gap: 32px;
+    position: absolute;
+    top:120px;
+    right: 0;
+}
+
+section.blocks .block {
+    border-radius: 16px;
+    background-color: var(--pure_white);
+    box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+    padding: 32px;
+    max-width: 365px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+article.block .head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+article.block h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+    color: var(--gunmetal);
+}
+
+article.block p {
+    color: var(--dark_electric_blue);
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.block_curved_line {
+    position: absolute;
+    left: 0;
+    top:40%;
+    transform: translate(-250%, -50%);
+}
+
+form#calculator {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+article.calculator h2 {
+    color: var(--gunmetal);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -1.2px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.options article.radio_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 238px;
+    width: 100%;
+}
+
+article.radio_wrapper input[type="radio"] {
+    appearance: none;
+    content: url(../assets/images/radio.svg);
+    width: 31px;
+    height: 31px;
+    transition: all .5s;
+}
+
+article.radio_wrapper input[type="radio"]:hover {
+    content: url(../assets/images/radio_hover.svg);
+}
+
+article.radio_wrapper input[type="radio"]:checked {
+    content: url(../assets/images/radio_selected.svg);
+}
+
+article.radio_wrapper label {
+    color: var(--gunmetal);
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 1rem;
+}
+
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+article.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 238px;
+    width: 100%;
+    position: relative;
+}
+
+span.unit {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    color: var(--blue);
+    font-size: 1.5rem;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+}
+
+article.input_wrapper input {
+    height: 69px;
+    padding: 20px 60px 20px 24px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid var(--dark_electric_blue);
+    color: var(--gunmetal);
+    font-family: "Inter", sans-serif;
+    font-size:1.5rem;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+}
+
+article.input_wrapper input:hover, article.input_wrapper input:focus {
+    border: 1px solid var(--blue);
+}
+
+article.input_wrapper input::placeholder {
+    font-family: "Inter", sans-serif;
+    color: var(--dark_electric_blue);
+}
+
+article.input_wrapper label {
+    font-size: 0.9rem;
+    line-height: 150%;
+    color: #5E6E85;
+}
+
+article.calculator_explanation {
+    background-color: var(--blue);
+    border-radius: 16px 999px 999px 16px;
+    padding: 32px;
+    color: var(--pure_white);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+article.calculator_explanation h3 {
+    font-size: 1.5rem;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+}
+
+article.calculator_explanation p {
+    font-size: 0.9rem;
+    line-height: 150%;   
+}
+
+.imperial_inputs {
+    align-items: end;
+}
+
+.imperial_inputs .unit_2 {
+    transform: translateY(-50%);
+}
+
+article.calculator_explanation.bmi_result {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+article.calculator_explanation.bmi_result p.explanation {
+    max-width: 206px;
+    color: var(--pure_white);
+    font-size: 14px;
+    line-height: 150%;
+}
+
+article.calculator_explanation.bmi_result .result {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+article.calculator_explanation.bmi_result .result span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+article.calculator_explanation.bmi_result .result h3 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 110%;
+    letter-spacing: -3.2px;
+}
